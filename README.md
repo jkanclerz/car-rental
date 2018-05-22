@@ -27,6 +27,7 @@ First Event Storming session
 * relations
 
 ![event storming session](docs/event_storming.svg "event storming session")
+![event storming session boundries](docs/event_storming--boundries.svg "event storming session")
 
 
 Continue reading:
