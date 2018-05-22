@@ -8,7 +8,6 @@ import pl.jkan.carrental.carcatalog.dto.CreateCarRequest;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController()
 class CarCatalogController {
@@ -20,7 +19,7 @@ class CarCatalogController {
     ResponseEntity<CarDetailsDto> detailsForCar(@PathVariable String carId) {
 
         return repository.findById(carId)
-                .map(car -> car.snapschot())
+                .map(car -> car.snapshot())
                 .map(dto -> ResponseEntity.ok(dto))
                 .orElseThrow(()-> new NotFoundException());
 
@@ -32,7 +31,7 @@ class CarCatalogController {
 
         repository.findAll()
                 .iterator()
-                .forEachRemaining(car -> list.add(car.snapschot()));
+                .forEachRemaining(car -> list.add(car.snapshot()));
 
         return list;
     }

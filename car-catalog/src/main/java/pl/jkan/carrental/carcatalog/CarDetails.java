@@ -31,7 +31,7 @@ class CarDetails {
         return new CarDetails(carId, r.getName(), r.getDescription());
     }
 
-    public CarDetailsDto snapschot() {
+    public CarDetailsDto snapshot() {
         return new CarDetailsDto(id, name, description);
     }
 }
